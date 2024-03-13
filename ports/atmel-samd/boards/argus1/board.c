@@ -31,25 +31,14 @@
 #include "shared-bindings/pwmio/PWMOut.h"
 
 void board_init(void) {
-    // Burn wire PWM for burn wire 1
-    pwmio_pwmout_obj_t pwm_burn1;
-    common_hal_pwmio_pwmout_construct(&pwm_burn1, &pin_PB31, 4096, 2, false);
-    common_hal_pwmio_pwmout_never_reset(&pwm_burn1);
-
-    // Burn wire PWM for burn wire 2
-    pwmio_pwmout_obj_t pwm_burn2;
-    common_hal_pwmio_pwmout_construct(&pwm_burn2, &pin_PB09, 4096, 2, false);
-    common_hal_pwmio_pwmout_never_reset(&pwm_burn2);
-
-    // Burn wire PWM for burn wire 3
-    pwmio_pwmout_obj_t pwm_burn3;
-    common_hal_pwmio_pwmout_construct(&pwm_burn3, &pin_PA04, 4096, 2, false);
-    common_hal_pwmio_pwmout_never_reset(&pwm_burn3);
-
-    // Burn wire PWM for burn wire 4
-    pwmio_pwmout_obj_t pwm_burn4;
-    common_hal_pwmio_pwmout_construct(&pwm_burn4, &pin_PB14, 4096, 2, false);
-    common_hal_pwmio_pwmout_never_reset(&pwm_burn4);
+    pwmio_pwmout_obj_t pwm;
+    common_hal_pwmio_pwmout_construct(&pwm, &pin_PA23, 4096, 2, false);
+    common_hal_pwmio_pwmout_never_reset(&pwm);
 }
 
-// Use the MP_WEAK supervisor/shared/board.c versions of routines not defined here.
+bool board_requests_safe_mode(void) {
+    return false;
+}
+
+void reset_board(void) {
+}
