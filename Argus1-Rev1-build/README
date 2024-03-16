@@ -1,0 +1,65 @@
+# Argus 1 Rev 1 Pinouts
+Use board.<PIN> to use the pin in your code
+
+## Comm Busses
+UART
+SPI
+I2C
+
+SCK     SPI Clock
+MOSI    SPI MOSI
+MISO    SPI MISO
+SD_CS   Chip select for the SD card
+
+TX
+RX
+JET_RX2
+JET_TX2
+
+SDA
+SCL
+SDA2
+SCL2
+
+
+## Enables
+VBUS_RESET      Reset for the entire board
+EN_RF           Enable for the RF Module
+EN_GPS          Enable for the GPS Module
+EN_IMU          Enable for the IMU
+EN_JET          Enable for the Jetson
+
+## RF
+RF1_RST
+RF1_CS
+RF1_IO4
+RF1_IO0
+
+## Burn Wires
+RELAY_A
+BURN1
+BURN2
+BURN3
+BURN4
+
+## NEOPIXEL
+NEOPIXEL
+
+## WDT
+WDT_WDI
+
+## MISC
+DAC0
+AIN5
+L1PROG
+INOKB
+
+PA15
+PA16
+PA17
+PA19
+PA20
+PA22
+PB16
+PB17
+PB22
